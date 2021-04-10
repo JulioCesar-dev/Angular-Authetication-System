@@ -1,0 +1,20 @@
+@media (min-width: 768px) { 
+    .content-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) { 
+    .content-container {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .content-container {
+        width: 60%;
+        margin: 0 auto;
+    }
+}

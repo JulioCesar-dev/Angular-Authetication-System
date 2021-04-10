@@ -1,0 +1,15 @@
+<p-toast position="top-right"></p-toast>
+<form #passwordForm="ngForm" (ngSubmit)="send()">
+    <div class="p-grid p-jc-center p-p-4">
+        <div class="p-col-12 p-sm-6 p-text-center p-text-bold p-mb-3">
+            <p>Entre com o e-mail cadastrado para recuperar sua senha.</p>
+            <div class="p-inputgroup p-mb-3">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input [(ngModel)]="email" required placeholder="Email" type="email" name="email" pInputText>
+            </div>
+            <div class="p-fluid">
+                <button [disabled]="!passwordForm.form.valid" pButton pRipple type="submit" label="Enviar" class="p-button-danger"></button>
+            </div>
+        </div>
+    </div>
+</form>
