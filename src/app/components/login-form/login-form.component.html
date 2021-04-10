@@ -1,0 +1,23 @@
+<p-toast position="top-right"></p-toast>
+<div class="p-grid p-jc-center">
+    <div class="p-col-12 p-sm-5">
+        <form class="p-py-5 p-px-3" #loginForm="ngForm">
+            <div class="p-fluid">
+                <div class="p-inputgroup p-mb-3">
+                    <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                    <input required [(ngModel)]="email" name="email" placeholder="Email" type="email" pInputText>
+                </div>
+                <div class="p-inputgroup p-mb-3">
+                    <span class="p-inputgroup-addon"><i class="pi pi-unlock"></i></span>
+                    <input required [(ngModel)]="password" name="password" placeholder="Password" type="password" pInputText>
+                </div>
+                <button [disabled]="!loginForm.form.valid" (click)="login()" pButton pRipple type="button" label="Login in" class="p-button-success p-mb-3"></button>
+                <button (click)="goToUserForm()" pButton pRipple type="button" label="Register here!" class="p-button-primary p-mb-3"></button>
+        
+                <div class="p-text-center">
+                    <a routerLink="/passord-recovery-form">Forgot your password?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

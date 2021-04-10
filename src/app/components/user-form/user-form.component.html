@@ -1,0 +1,54 @@
+<p-toast position="top-right"></p-toast>
+<form #userForm="ngForm" (ngSubmit)="save()">
+    <div class="p-grid">
+        <div class="p-col-12 p-sm-6 p-p-4">
+            <div class="p-fluid">
+                <div class="p-field p-mb-3">
+                    <label class="p-text-bold" for="form-user-full-name p-text-bold">Nome completo:</label>
+                    <input required [(ngModel)]="user.fullName" name="fullName" id="form-user-full-name" type="text" pInputText/>
+                </div>
+                <div class="p-field p-mb-3">
+                    <label class="p-text-bold" for="form-user-full-name p-text-bold">E-mail:</label>
+                    <input required [(ngModel)]="user.email" name="email" id="form-user-full-name" type="text" pInputText/>
+                </div>
+                
+                <div class="p-field p-mb-3">
+                    <label class="p-text-bold" for="form-user-full-name p-text-bold">Celular:</label>
+                    <input required [(ngModel)]="user.phone" name="phone" id="form-user-full-name" type="text" pInputText/>
+                </div>
+                
+                <div class="p-field p-mb-3">
+                    <label class="p-text-bold" for="form-user-full-name">Senha:</label>
+                    <input required [(ngModel)]="user.password" name="password" id="form-user-full-name" type="text" pInputText/>
+                </div>
+                
+                <div class="p-field p-mb-0">
+                    <label class="p-text-bold" for="form-user-full-name">Confirmar senha:</label>
+                    <input required [(ngModel)]="passwordRepeat" name="passwordRepeat" id="form-user-full-name" type="text" pInputText/>
+                </div>
+                
+                <div class="p-fluid p-mt-3 p-d-sm-none">
+                    <button [disabled]="!userForm.form.valid" pButton pRipple type="submit" label="Salvar" class="p-button-success p-text-bold"></button>
+                </div>
+            </div>
+        </div>
+        <div class="p-col-12 p-sm-6 p-p-4">
+            <div class="app-center-container photo-container p-p-4">
+                <div class="p-text-center app-center">
+                    <p-avatar icon="pi pi-user" size="xlarge" shape="circle"></p-avatar>
+                </div>
+            </div>
+            <div class="p-fluid p-mt-3 p-d-sm-none">
+                <button pButton pRipple type="button" label="Carregar foto" class="p-button-secondary"></button>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid p-d-none p-d-sm-flex">
+        <div class="p-col-12 p-sm-6 p-fluid p-px-4">
+            <button [disabled]="!userForm.form.valid" pButton pRipple type="submit" label="Salvar" class="p-button-success p-text-bold"></button>
+        </div>
+        <div class="p-col-12 p-sm-6 p-fluid p-px-4">
+            <button pButton pRipple type="button" label="Carregar foto" class="p-button-secondary p-text-bold"></button>
+        </div>
+    </div>
+</form>
